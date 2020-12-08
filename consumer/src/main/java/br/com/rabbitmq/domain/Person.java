@@ -1,4 +1,4 @@
-package br.com.rabbitmq.consumer.domain;
+package br.com.rabbitmq.domain;
 
 import java.time.LocalDate;
 
@@ -39,6 +39,12 @@ public class Person {
 	
 	public void setActive(Boolean active) {
 		this.active = active;
+	}
+
+	@Override
+	public String toString() {
+		return "Person [name=" + name + ", collegeCompletedYear=" + collegeCompletedYear + ", dateOfBirth="
+				+ dateOfBirth + ", active=" + active + "]";
 	}
 
 }

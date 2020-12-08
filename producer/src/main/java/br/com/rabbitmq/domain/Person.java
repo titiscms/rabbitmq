@@ -1,4 +1,4 @@
-package br.com.rabbitmq.producer.domain;
+package br.com.rabbitmq.domain;
 
 import java.time.LocalDate;
 

@@ -8,7 +8,7 @@ import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.rabbitmq.consumer.domain.Person;
+import br.com.rabbitmq.domain.Person;
 
 @Service
 public class JsonConsumerService {
@@ -25,7 +25,7 @@ public class JsonConsumerService {
 		
 		Person person = (Person) messageConverter.fromMessage(message);
 		
-		LOGGER.info(String.format("Corpo da mensagem >>>> %s", message.getBody().toString()));
+		LOGGER.info(String.format("Corpo da mensagem >>>> %s", person.toString()));
 		LOGGER.info(String.format("Nome da pessoa >>>> %s", person.getName()));
 		LOGGER.info("Fim do método receiveMessageFromJsonQueue()");
 	}
